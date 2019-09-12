@@ -1,0 +1,16 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /home/ruchit/www/hw01.ruchiturunkar.space;
+
+        index index.html;
+
+        server_name hw01.ruchiturunkar.space;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ /index.html?$args;
+        }
+}
